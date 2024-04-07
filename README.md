@@ -67,6 +67,18 @@ ethwallet save-alias <alias> <address>
 ethwallet balance <address or alias>
 ```
 
+### Sending Ethereum (ETH)
+The send command allows you to securely send ETH to another Ethereum address. The command prompts you for a password to decrypt your stored private key, ensuring your transaction is signed without directly exposing your private key.
+
+Usage
+To send ETH, use the following command structure:
+
+```bash
+ethwallet send --to <recipientAddress> --amount <amount>
+```
+
+After executing the command, you'll be prompted to enter the password you used to encrypt your private key. Once the correct password is provided, the transaction will be processed.
+
 ## Security Considerations
 This wallet stores the private key in an encrypted format. However, it's crucial to keep the .env file, the encrypted key file, and the password secure. Avoid sharing your private key and password.
 
